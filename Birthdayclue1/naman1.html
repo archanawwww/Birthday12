@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Naman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600;700&family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-red: #8B0000;
+      --light-rose: #121010;
+      --white: #ffffff;
+      --gold: #a19137;
+      --soft-bg: rgba(255, 245, 247, 0.85);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: url('36aa9f54c4ff9ec7b55e84338c8ac430.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(0px);
+      background-blend-mode: multiply;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: var(--deep-red);
+      min-height: 100vh;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    h1.birthday-header {
+      font-family: 'Dancing Script', cursive;
+      font-size: 5rem;
+      color: var(--deep-red);
+      text-shadow: 2px 2px 8px var(--gold);
+      margin-bottom: 2rem;
+      animation: floatUp 6s ease-in-out infinite alternate, sparkle 2s infinite;
+    }
+
+    .photo {
+      width: 220px;
+      height: 220px;
+      background-position: 60% center;
+      border-radius: 60%;
+      background: url('WhatsApp Image 2025-05-23 at 22.40.48.jpeg') no-repeat center center;
+      background-size: cover;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem;
+      
+    }
+
+    .rotating-quote {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+      color: var(--light-rose);
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px var(--white);
+      min-height: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+      text-shadow: 1px 1px 2px var(--white);
+    }
+
+    .content-box {
+      background: var(--soft-bg);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      padding: 2rem;
+      max-width: 900px;
+      margin-top: 2rem;
+    }
+
+    .content-box h2, .content-box h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size:2.2rem;
+      margin: 1.5rem 0 0.8rem;
+      text-shadow: 0 0 5px #ffdddd;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+      font-weight: 600;
+    }
+
+    li::before {
+      content: "❤️";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    a button {
+      margin-top: 2rem;
+      padding: 14px 40px;
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, var(--deep-red), var(--light-rose));
+      border: none;
+      border-radius: 30px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 20px rgba(139, 0, 0, 0.4);
+    }
+
+    a button:hover {
+      transform: scale(1.08);
+      background: linear-gradient(135deg, #ff4d4d, #b30000);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); }
+      to { transform: translateY(-15px); }
+    }
+
+    @keyframes sparkle {
+      0%, 100% { text-shadow: 0 0 10px #fff, 0 0 20px var(--light-rose); }
+      50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff3333; }
+    }
+
+    @media screen and (max-width: 600px) {
+      h1.birthday-header {
+        font-size: 3rem;
+      }
+
+      .content-box {
+        padding: 1.5rem;
+      }
+
+      a button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="birthday-header">🎂 Happy Birthday, Naman! 🎂</h1>
+  <div class="photo"></div>
+
+  <div class="rotating-quote" id="quote"></div>
+
+  <p>
+    Today is not just a date on the calendar — it's the day the world was blessed with <em>you</em>. 💫<br>
+    And even if we're miles apart, I’ve prepared something that brings me close to your heart... 💞
+  </p>
+
+  <div class="content-box">
+    <h2>🔍 Your Mission, Should You Choose to Accept It:</h2>
+    <p>This is no ordinary birthday wish. It's a game of love, clues, and memories — custom-made just for the one who means the world to me — <em>YOU</em>.</p>
+
+    <h3>🧩 What Awaits You:</h3>
+    <ul>
+      <li>5 mysterious and magical web pages</li>
+      <li>Each one locked with a special password</li>
+      <li>Each one hiding a memory, a moment, or a piece of me</li>
+      <li>And at the end... a surprise that’s from my heart to yours</li>
+    </ul>
+
+    <h3>💡 Need to Know:</h3>
+    <ul>
+      <li>Each password is a part of our story — hints will be there</li>
+      <li>Only the real Naman (you 😉) can solve them</li>
+      <li>Complete all 5 clues, and the final treasure will be unlocked</li>
+    </ul>
+
+    <h2>💬 Before You Begin:</h2>
+    <p>
+      Close your eyes for a second. Take a deep breath. <br>
+      Feel me hugging you tight, whispering, <em>“This is all for you.”</em> ❤️
+    </p>
+  </div>
+
+  <p>Are you ready, birthday boy? The first clue awaits you... Let the magic begin.</p>
+
+  <a href="clue1.html"><button>✨ Begin Your Journey →</button></a>
+
+  <script>
+    const quotes = [
+      "You are my favorite place to go when my mind searches for peace.",
+      "In your smile, I see something more beautiful than stars.",
+      "With you, every moment is a fairytale.",
+      "You are the poem I never knew how to write.",
+      "Even when you're far, you're right here in my heart."
+    ];
+    let quoteIndex = 0;
+    const quoteElement = document.getElementById("quote");
+    function rotateQuote() {
+      quoteElement.textContent = quotes[quoteIndex];
+      quoteIndex = (quoteIndex + 1) % quotes.length;
+    }
+    rotateQuote();
+    setInterval(rotateQuote, 5000);
+
+
+
+
+    
+  </script>
+</body>
+</html>

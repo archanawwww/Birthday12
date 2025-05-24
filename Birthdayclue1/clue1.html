@@ -1,0 +1,223 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>begin the journey</title>
+  <style>
+    /* fullscreen video background */
+    #video-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+      filter: brightness(0.4);
+    }
+
+    /* dark overlay to improve text visibility */
+    #overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #eee;
+      text-align: center;
+      padding: 50px 20px;
+      text-transform: lowercase;
+      background: transparent; /* video visible */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: flex-start;
+    }
+
+    h1, h2, p, table, button, input {
+      text-transform: lowercase;
+      user-select: none;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      font-size: 3rem;
+      text-shadow: 0 0 8px #00c9ffaa;
+    }
+
+    button {
+      background-color: #00c9ff;
+      border: none;
+      padding: 14px 40px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #111;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 15px #00c9ff88;
+      user-select: none;
+      margin-top: 20px;
+      letter-spacing: 0.05em;
+    }
+    button:hover {
+      background-color: #009fcc;
+      box-shadow: 0 0 25px #00c9ffcc;
+    }
+
+    #begin-section, #password-section, #clue-section {
+      max-width: 600px;
+      margin: 0 auto;
+      background: rgba(10, 10, 10, 0.6);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px #00c9ff55;
+      transition: opacity 0.5s ease;
+    }
+
+    #password-section, #clue-section {
+      display: none;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      max-width: 300px;
+      padding: 12px 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #00c9ffaa;
+      outline: none;
+      margin-top: 15px;
+      background-color: #292424;
+      color: #eee;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+      user-select: text;
+    }
+
+    input[type="text"]::placeholder {
+      color: #666;
+      font-weight: 500;
+    }
+
+    p, em {
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+      color: #ddd;
+      margin: 20px 0 10px;
+    }
+
+    em {
+      font-style: italic;
+      color: #aaddffcc;
+    }
+
+    table {
+      width: 100%;
+      max-width: 500px;
+      margin: 25px auto 0;
+      border-collapse: collapse;
+      box-shadow: 0 0 25px #00c9ff33;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #111a;
+    }
+    th, td {
+      padding: 15px 20px;
+      border-bottom: 1px solid #00c9ff55;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #aaddffdd;
+      text-align: left;
+    }
+    th {
+      background-color: #002233aa;
+      font-size: 1.1rem;
+    }
+    td {
+      background-color: #001622cc;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    strong {
+      color: #00c9ffcc;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      display: block;
+      margin-top: 30px;
+      font-size: 1.1rem;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <video id="video-bg" autoplay muted loop playsinline>
+    <source src="856309-hd_1920_1080_30fps.mp4" type="video/mp4" />
+    your browser does not support the video tag.
+  </video>
+
+  <div id="overlay"></div>
+
+<h1 style="text-transform: uppercase;">🌠 BEGIN THE JOURNEY</h1>
+
+
+  <div id="begin-section">
+    <button onclick="showPasswordSection()">begin</button>
+  </div>
+
+  <div id="password-section">
+    <p><em>"the month when the stars aligned and we first crossed paths."</em></p>
+    <input type="text" id="password" placeholder="enter the magical word..." autocomplete="off" />
+    <button onclick="checkPassword()">unlock</button>
+    <p id="error" style="color: #ff4444; user-select:none;"></p>
+  </div>
+
+  <div id="clue-section">
+    <h2>🗺️ your map of mysteries unfolds...</h2>
+    <p>💌 the real magic happens when you follow your heart at the right time...</p>
+    <table>
+      <tr><th>🕰️ time</th><th>🧩 clue</th></tr>
+      <tr><td>10:00 am</td><td>🔒 clue 1</td></tr>
+      <tr><td>1:00 pm</td><td>🔒 clue 2</td></tr>
+      <tr><td>4:00 pm</td><td>🔒 clue 3</td></tr>
+      <tr><td>9:00 pm</td><td>🔒 clue 4</td></tr>
+      <tr><td>12:00 am</td><td>🔒 clue 5</td></tr>
+    </table>
+    <strong>“every step you take today is a piece of our story, and i believe you’ll find your way through each clue. you’ve got this — i’m already proud of you.”</strong>
+  </div>
+
+  <script>
+    function showPasswordSection() {
+      document.getElementById("begin-section").style.display = "none";
+      document.getElementById("password-section").style.display = "block";
+      document.getElementById("error").innerText = "";
+      document.getElementById("password").value = "";
+      document.getElementById("password").focus();
+    }
+
+    function checkPassword() {
+      const input = document.getElementById("password").value.trim().toLowerCase();
+      if (input === "january") {
+        document.getElementById("password-section").style.display = "none";
+        document.getElementById("clue-section").style.display = "block";
+      } else {
+        document.getElementById("error").innerText = "that doesn’t feel magical... try again.";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
